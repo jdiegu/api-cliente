@@ -32,14 +32,14 @@
 </div>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=php,laravel,bootstrap,mysql&perline=6" />
+  <img src="https://skillicons.dev/icons?i=php,laravel,bootstrap,mysql,git&perline=6" />
 </p>
 
 <ul>
-  <li>PHP 8+</li>
-  <li>Laravel 10+</li>
-  <li>Bootstrap 5.3</li>
-  <li>GuzzleHTTP</li>
+  <li>PHP</li>
+  <li>Laravel</li>
+  <li>Bootstrap</li>
+  <li>Guzzle</li>
   <li>Composer</li>
   <li>XAMPP / MySQL</li>
 </ul>
@@ -52,8 +52,8 @@
 <h3>📂 1. Clonar el repositorio</h3>
 
 ```bash
-git clone https://github.com/tuusuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/jdiegu/api-cliente.git
+cd api-cliente
 ```
 
 <h3>📦 2. Instalar dependencias</h3>
@@ -71,13 +71,13 @@ cp .env.example .env
 Agregar la URL base de la API:
 
 ```env
-URL_SERVER_API=http://localhost:8080/api/tareas
+URL_SERVER_API=http://localhost:8000/api/tareas
 ```
 
 <h3>▶️ 4. Ejecutar el servidor</h3>
 
 ```bash
-php artisan serve --port=8000
+php artisan serve --port=8080
 ```
 
 ---
@@ -89,6 +89,7 @@ php artisan serve --port=8000
 </div>
 
 <p>La API debe instalarse y ejecutarse por separado. Requisitos:</p>
+[API Tareas Laravel](https://github.com/jdiegu/api-laravel)
 
 <ul>
   <li>PHP</li>
@@ -97,7 +98,7 @@ php artisan serve --port=8000
 </ul>
 
 ```bash
-git clone https://github.com/tuusuario/api-tareas.git
+git clone https://github.com/jdiegu/api-laravel.git
 cd api-tareas
 composer install
 cp .env.example .env
@@ -155,10 +156,10 @@ php artisan serve --port=8080
 </div>
 
 <ul>
-  <li>Ejecuta el <strong>frontend</strong> y la <strong>API</strong> en <strong>puertos distintos</strong>:</li>
+  <li>Ejecuta el <strong>Cliente</strong> y la <strong>API</strong> en <strong>puertos distintos</strong>:</li>
   <ul>
-    <li>Frontend: <code>http://localhost:8000</code></li>
-    <li>API: <code>http://localhost:8080</code></li>
+    <li>Cliente: <code>http://localhost:8080</code></li>
+    <li>API: <code>http://localhost:8000</code></li>
   </ul>
   <li>Asegúrate de que la API esté levantada antes de usar el CRUD.</li>
   <li>Verifica las variables en los archivos <code>.env</code>.</li>
@@ -177,12 +178,10 @@ php artisan serve --port=8080
 </div>
 
 <p align="center">
-  <a href="https://github.com/tuusuario" target="_blank">
+  <a href="https://github.com/jdiegu" target="_blank">
     <img src="https://skillicons.dev/icons?i=github" height="50" />
   </a>
-  <br><br>
-  <strong>Correo:</strong> tu.correo@example.com <br>
-  
+  <br>
 </p>
 
 <!-- Footer Divider -->
