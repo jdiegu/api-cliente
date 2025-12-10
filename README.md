@@ -88,9 +88,9 @@ php artisan serve --port=8080
   <h2>🔌 Instalación de la API (Repositorio externo)</h2>
 </div>
 
-<p>La API debe instalarse y ejecutarse por separado. Requisitos:</p>
-
 <https://github.com/jdiegu/api-laravel>
+
+<p>La API debe instalarse y ejecutarse por separado. Requisitos:</p>
 
 <ul>
   <li>PHP</li>
