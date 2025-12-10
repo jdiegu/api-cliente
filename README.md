@@ -1,59 +1,196 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
+<!-- Animated Divider -->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+<!-- Header -->
+<div align="center">
+  <h1>📌 CRUD de Tareas – Laravel + API Externa</h1>
+  <h3>Aplicación CRUD que consume una API externa usando Laravel + Bootstrap</h3>
+</div>
+
+<!-- Animated Divider -->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+<!-- About the Project -->
+<div align="center">
+  <h2>📘 Descripción del Proyecto</h2>
+</div>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  Este proyecto es una aplicación en <strong>Laravel</strong> que permite gestionar tareas mediante un 
+  <strong>CRUD completo</strong>, consumiendo una <strong>API externa</strong> ubicada en otro repositorio.
+  Todo el frontend está construido con <strong>Blade</strong> y estilizado con <strong>Bootstrap 5</strong>.
 </p>
 
-## About Laravel
+<p align="center">
+  Para funcionar correctamente, el proyecto requiere montar también la API, la cual debe ejecutarse en otro puerto.
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<!-- Tech Stack -->
+<div align="center">
+  <h2>🛠️ Tecnologías utilizadas</h2>
+</div>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=php,laravel,bootstrap,mysql&perline=6" />
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<ul>
+  <li>PHP 8+</li>
+  <li>Laravel 10+</li>
+  <li>Bootstrap 5.3</li>
+  <li>GuzzleHTTP</li>
+  <li>Composer</li>
+  <li>XAMPP / MySQL</li>
+</ul>
 
-## Learning Laravel
+<!-- Installation -->
+<div align="center">
+  <h2>⚙️ Instalación del Proyecto</h2>
+</div>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+<h3>📂 1. Clonar el repositorio</h3>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+git clone https://github.com/tuusuario/tu-repo.git
+cd tu-repo
+```
 
-## Laravel Sponsors
+<h3>📦 2. Instalar dependencias</h3>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+composer install
+```
 
-### Premium Partners
+<h3>⚙️ 3. Configure el archivo <code>.env</code></h3>
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+```bash
+cp .env.example .env
+```
 
-## Contributing
+Agregar la URL base de la API:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```env
+URL_SERVER_API=http://localhost:8080/api/tareas
+```
 
-## Code of Conduct
+<h3>▶️ 4. Ejecutar el servidor</h3>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+php artisan serve --port=8000
+```
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<!-- API Setup -->
 
-## License
+<div align="center">
+  <h2>🔌 Instalación de la API (Repositorio externo)</h2>
+</div>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p>La API debe instalarse y ejecutarse por separado. Requisitos:</p>
+
+<ul>
+  <li>PHP</li>
+  <li>Composer</li>
+  <li>XAMPP o MySQL/MariaDB</li>
+</ul>
+
+```bash
+git clone https://github.com/tuusuario/api-tareas.git
+cd api-tareas
+composer install
+cp .env.example .env
+```
+
+Configura la base de datos y luego:
+
+```bash
+php artisan migrate
+php artisan serve --port=8080
+```
+
+---
+
+<!-- Endpoints -->
+
+<div align="center">
+  <h2>📡 Endpoints que Consume el CRUD</h2>
+</div>
+
+<table>
+  <tr>
+    <th>Acción</th>
+    <th>Método</th>
+    <th>Endpoint</th>
+  </tr>
+  <tr>
+    <td>Listar tareas</td>
+    <td>GET</td>
+    <td>/tareas</td>
+  </tr>
+  <tr>
+    <td>Crear tarea</td>
+    <td>POST</td>
+    <td>/tareas</td>
+  </tr>
+  <tr>
+    <td>Actualizar tarea</td>
+    <td>PUT</td>
+    <td>/tareas/{id}</td>
+  </tr>
+  <tr>
+    <td>Eliminar tarea</td>
+    <td>DELETE</td>
+    <td>/tareas/{id}</td>
+  </tr>
+</table>
+
+---
+
+<!-- Recommendations -->
+
+<div align="center">
+  <h2>💡 Recomendaciones</h2>
+</div>
+
+<ul>
+  <li>Ejecuta el <strong>frontend</strong> y la <strong>API</strong> en <strong>puertos distintos</strong>:</li>
+  <ul>
+    <li>Frontend: <code>http://localhost:8000</code></li>
+    <li>API: <code>http://localhost:8080</code></li>
+  </ul>
+  <li>Asegúrate de que la API esté levantada antes de usar el CRUD.</li>
+  <li>Verifica las variables en los archivos <code>.env</code>.</li>
+  <li>Activa Apache y MySQL si usas XAMPP.</li>
+  <li>Ejecuta migraciones de la API correctamente.</li>
+
+</ul>
+
+
+---
+
+<!-- Contact -->
+
+<div align="center">
+  <h2>📬 Contacto</h2>
+</div>
+
+<p align="center">
+  <a href="https://github.com/tuusuario" target="_blank">
+    <img src="https://skillicons.dev/icons?i=github" height="50" />
+  </a>
+  <br><br>
+  <strong>Correo:</strong> tu.correo@example.com <br>
+  
+</p>
+
+<!-- Footer Divider -->
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+<p align="center">
+  <em>Proyecto desarrollado por <strong> Diego Morales</strong></em>
+</p>
+
+
